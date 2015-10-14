@@ -34,6 +34,9 @@ body {
 .input-form input {
 	width: 100%;
 	height: 2rem;
+	border: .125em solid #b2dfff;
+	border-radius: 5px;
+	text-align: center;
 }
 
 /* List Items */
@@ -78,6 +81,9 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 	font-family: 'Roboto Condensed', sans-serif;
+	border-style: none;
+	border-radius: 5px;
+	background-color: #bde4ff;
 }
 button:hover {
 	cursor: pointer;
