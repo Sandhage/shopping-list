@@ -1,10 +1,7 @@
 $(document).ready(function() {
 	// Add Button
 	$('.add').click(function() {
-		var input = $('input').val();
-		$('input').val('');
-
-		$('.ul').prepend('<div class="item"><li>' + input + '</li><hr  /></div>');
+		submitForm();
 	});
 
 	// Clear All Button 
@@ -41,9 +38,21 @@ $(document).ready(function() {
 		axis: "y"
 	});
 
+	// Prevent Form Default
+	$(".input-form").submit(function(e) {
+        e.preventDefault();
+        submitForm();
+    });
+
 });
 
-// <div class="item">
-// 	<li>Milk</li>
-// 	<hr  />
-// </div>
+// Custom Function: Submit/Click 'Add Button'
+function submitForm () {
+	var input = $('input').val();
+    $('input').val('');
+    if ( input == '' ) {
+    	alert ( "Don't be stupid! Type something!" );
+    } else {
+    	$('.ul').prepend('<div class="item"><li>' + input + '</li><hr  /></div>');
+    }
+}
