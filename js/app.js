@@ -13,7 +13,7 @@ $(document).ready(function() {
 	});
 
 	// Selecting an Item
-	$('.item').click(function() {
+	$('.ul').on('click', '.item', function() {
 		if ( $(this).hasClass('active') ) {
 			$(this).removeClass('active');
 		} else {
@@ -35,6 +35,12 @@ $(document).ready(function() {
 			$('.active').addClass('checked');
 		}
 	});
+
+	// Drag and Drop
+	$(".ul").sortable({
+		axis: "y"
+	});
+
 });
 
 // <div class="item">
